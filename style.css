@@ -1,0 +1,174 @@
+/*Base styles*/
+:root {
+    --blue: #0012B9;
+    --yellow: #FDCC20;
+    --paleYellow: #FFDC62;
+    --min-Width: 10%;
+    --bold: 850;
+    --midweight: 500;
+    --rem: 10rem;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "montserrat", 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+
+/*nav Bar*/
+.navbar{
+    background-color: var(--blue);
+    color: white;
+    width: 100vw;
+    /* padding-bottom: 20px; */
+}
+
+.navbar-head{
+    display: grid;
+    grid-column: span 8;
+    margin: 20px;
+}
+
+/* fonts */
+#navbrand{
+    grid-column: 1/4;
+    grid-row: 1;
+    font-weight: var(--bold);
+}
+
+
+/* images */
+.navbar-head img{
+    width: var(--min-Width);
+    /* width: calc(var(--min-Width) - 10px); */
+    justify-self: end;
+    grid-column: 4/9;
+    grid-row: 1;
+}
+
+.nav-menu img{
+    width: var(--min-Width);
+}
+
+/* links */
+.nav-link{
+    list-style-type: none;
+}
+
+.nav-link a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.nav-link a:hover{
+    color: white;
+}
+
+/* home section */
+
+#home{
+    position: absolute;
+    top: 120px;
+    /* z-index: 2; */
+    overflow-x: hidden;
+}
+
+.theme-text h1{
+    font-weight: var(--bold);
+    font-size: 40px;
+    color: white;
+    margin: 0 20px;
+}
+
+.theme-text h2{
+    color: var(--blue);
+    font-size: 17.5px;
+    margin: 0 20px;
+}
+
+.home-image{
+    grid-column: 3/9;
+}
+
+.home-image img{
+    width: 200px;
+}
+
+.FoM{
+    margin: 15px 20px;
+}
+
+/*SERVICES CODES*/
+#services{
+    margin-top: 70px;
+}
+#services img, #services div{
+    grid-column: 1/9;
+    width: 50%;
+    justify-self: center;
+}
+
+.services-heading{
+    background-color: var(--blue);
+    text-align: center;
+    color: var(--yellow);
+    font-weight: 800;
+    padding: 5px;
+}
+
+/* .services-links{
+    background-color: white;
+} */
+
+.service-btn{
+    background-color: white;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: 5px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+}
+
+
+/* hero section codes */
+#hero{
+    gap: 20px;
+}
+
+.bible-text{
+    grid-column: span 8;
+    color: white;
+    background-color: var(--blue);
+    margin: auto 10px;
+    padding: 5px 10px;
+}
+
+.bible-text p:nth-child(1){
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.team, .badges, .about{
+    grid-column: span 8;
+    margin: auto 10px;
+    color: var(--blue);
+}
+
+.badges p{
+    background-color: var(--blue);
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
